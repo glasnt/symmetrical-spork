@@ -1,0 +1,13 @@
+{
+    "name": "demo-app",
+    "env": {
+        "TARGET": {"description": "Who is your app greeting", "value": "World" },
+        "EMOJI":  {"description": "optional emoji for flair", "required": false}
+    },
+    "hooks": {
+        "prebuild":   {"commands": ["./1-prebuild.sh"]},
+        "postbuild":  {"commands": ["./2-postbuild.sh"]},
+        "precreate":  {"commands": ["./3-precreate.sh"]},
+        "postcreate": {"commands": ["./4-postcreate.sh"]}
+    }
+}
