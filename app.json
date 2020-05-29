@@ -2,7 +2,8 @@
     "name": "demo-app",
     "env": {
         "TARGET": {"description": "Who is your app greeting", "value": "World" },
-        "EMOJI":  {"description": "optional emoji for flair", "required": false}
+        "EMOJI":  {"description": "optional emoji for flair", "required": false},
+        "SECRET": {"generator": "secret"}
     },
     "hooks": {
         "prebuild":   {"commands": ["./1-prebuild.sh"]},
